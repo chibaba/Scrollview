@@ -12,27 +12,28 @@
         android:padding="15dp">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/tvImageView"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_weight="0.11"
-            android:imageColor="#fd2"
+            android:src="@drawable/red"
             />
         <TextView
-            android:id="@+id/textViewName"
+            android:id="@+id/tvColorName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/imageView"
-            android:layout_toRightOf="@id/imageView"
+            android:layout_toRightOf="@id/tvImageView"
             android:textColor="#333"
-            android:textSize="22dp"
+            android:text="Red"
+            android:textSize="32dp"
             android:textStyle="bold" />
         <TextView
             android:id="@+id/tvDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textViewName"
+            android:layout_below="@+id/tvColorName"
             android:layout_toEndOf="@+id/imageView"
             android:layout_toRightOf="@+id/imageView"
             android:layout_weight="1"
