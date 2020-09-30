@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,11 +30,6 @@ public class ListdataActivity extends AppCompatActivity {
         colorName.setText(intent.getStringExtra("colorName"));
         description.setText(intent.getStringExtra("description"));
         image.setImageResource(intent.getIntExtra("image",0));
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+        btn.setText(intent.getStringExtra("urlBrowser"));
     }
 }

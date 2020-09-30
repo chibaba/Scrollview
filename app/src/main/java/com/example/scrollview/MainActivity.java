@@ -2,7 +2,11 @@ package com.example.scrollview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
        " The page \"Skyblue color\" does not exist. You can ask for it to be created, but consider checking the search results below to see whether the topic is already covered.",
        "Turquoise is an opaque, blue-to-green mineral that is a hydrated phosphate of copper and aluminium, with the chemical formula CuAl6(PO4)4(OH)8·4H2O. ",
        "Yellow is the color between orange and green on the spectrum of visible light."};
+       String [] url ={};
        Integer[] imgid = {R.drawable.abstractyellow, R.drawable.babycolor, R.drawable.black, R.drawable.brown,
                            R.drawable.bungurdy, R.drawable.coffeebrown, R.drawable.gold, R.drawable.green,
                            R.drawable.indigo, R.drawable.lemon, R.drawable.lilacred, R.drawable.maroon,
@@ -48,9 +53,19 @@ public class MainActivity extends AppCompatActivity {
 
         CustomListView customListView = new CustomListView(this, colorName, desc, imgid);
 
-        ListdataActivity listdataActivity = new ListdataActivity();
-
-
         first.setAdapter(customListView);
+
+        first.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent (getApplicationContext(), ListdataActivity.class);
+
+                intent.putExtra("name", colorName);
+                intent.putExtra( "name", desc);
+                intent.putExtra("name", imgid);
+                startActivity(intent);
+            }
+        });
+
     }
 }

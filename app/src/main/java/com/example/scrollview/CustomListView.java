@@ -71,4 +71,6 @@ public class CustomListView extends ArrayAdapter<String> {
             ivw = (ImageView) v.findViewById(R.id.tvImageView);
         }
     }
+
+
 }
