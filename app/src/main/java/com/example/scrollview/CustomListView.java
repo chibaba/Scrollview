@@ -2,6 +2,7 @@ package com.example.scrollview;
 
 import android.app.Activity;
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -31,7 +32,32 @@ public class CustomListView extends ArrayAdapter<String> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        return super.getView(position, convertView, parent);
+
+        View r = convertView;
+        ViewHolder viewHolder=null;
+
+        if(r==null) {
+
+            LayoutInflater layoutInflater=context.getLayoutInflater();
+
+            r=layoutInflater.inflate(R.layout.listview_layout, null, true);
+            viewHolder= new ViewHolder(r);
+
+            r.setTag(viewHolder);
+        }
+        else  {
+            viewHolder= (ViewHolder) r.getTag ();
+
+
+        }
+        viewHolder.ivw.setImageResource(imgid[position]);
+
+        viewHolder.tvw1.setText(colorName[position]);
+
+        viewHolder.tvw2.setText(desc[position]);
+
+
+        return r;
     }
 
     class ViewHolder {
@@ -42,7 +68,7 @@ public class CustomListView extends ArrayAdapter<String> {
         ViewHolder(View v) {
             tvw1=(TextView) v.findViewById(R.id.tvColorName);
             tvw2= (TextView) v.findViewById(R.id.tvDescription);
-            ivw = (T)
+            ivw = (ImageView) v.findViewById(R.id.tvImageView);
         }
     }
 }

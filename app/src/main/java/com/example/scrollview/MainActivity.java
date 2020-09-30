@@ -44,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        first = (ListView) findViewById(R.id.listView);
+        first = (ListView) findViewById(R.id.listview);
+
+        CustomListView customListView = new CustomListView(this, colorName, desc, imgid);
+
+        ListdataActivity listdataActivity = new ListdataActivity();
+
+
+        first.setAdapter(customListView);
     }
 }

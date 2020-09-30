@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListdataActivity">
+
+    <ImageView
+        android:id="@+id/tvImager"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_weight="0.11"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/red"
+        />
+    <TextView
+        android:id="@+id/tvColName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/tvImager"
+        android:layout_marginTop="54dp"
+        android:textColor="#333"
+        android:text="Red"
+        android:textSize="32dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvDescri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvColName"
+        android:layout_toStartOf="@+id/tvImager"
+        android:layout_marginTop="200dp"
+        android:layout_weight="1"
+        android:paddingLeft="5dp"
+        android:textColor="#333"
+        android:layout_toLeftOf="@+id/tvImager" />
+
+    <Button
+        android:id="@+id/tvBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvImager"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="204dp"
+        android:text="Learn More.." />
+
+
+
+</RelativeLayout>
