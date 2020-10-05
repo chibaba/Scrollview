@@ -38,7 +38,11 @@ public class MainActivity extends AppCompatActivity {
        " The page \"Skyblue color\" does not exist. You can ask for it to be created, but consider checking the search results below to see whether the topic is already covered.",
        "Turquoise is an opaque, blue-to-green mineral that is a hydrated phosphate of copper and aluminium, with the chemical formula CuAl6(PO4)4(OH)8·4H2O. ",
        "Yellow is the color between orange and green on the spectrum of visible light."};
-       String [] url ={};
+       String [] url ={"https://en.wikipedia.org/w/index.php?search=abstract+yellow&", "https://en.wikipedia.org/w/index.php?search=Bay+(color)", "https://en.wikipedia.org/wiki/Black","https://en.wikipedia.org/wiki/Brown",
+                 "https://en.wikipedia.org/wiki/Bungurdy","https://en.wikipedia.org/wiki/coffeebrown","https://en.wikipedia.org/wiki/Gold", "https://en.wikipedia.org/wiki/Green","https://en.wikipedia.org/wiki/Indigo",
+               "https://en.wikipedia.org/wiki/Lemon", "https://en.wikipedia.org/wiki/lilacred","https://en.wikipedia.org/wiki/Maroon", "https://en.wikipedia.org/wiki/Blackhttps://en.wikipedia.org/wiki/mosquitobrown","https://en.wikipedia.org/wiki/Pepperred",
+               "https://en.wikipedia.org/wiki/Pink", "https://en.wikipedia.org/wiki/Purple","https://en.wikipedia.org/wiki/red", "https://en.wikipedia.org/wiki/Skyblue", "https://en.wikipedia.org/wiki/torquoise",
+               "https://en.wikipedia.org/wiki/yeelow"};
        Integer[] imgid = {R.drawable.abstractyellow, R.drawable.babycolor, R.drawable.black, R.drawable.brown,
                            R.drawable.bungurdy, R.drawable.coffeebrown, R.drawable.gold, R.drawable.green,
                            R.drawable.indigo, R.drawable.lemon, R.drawable.lilacred, R.drawable.maroon,
