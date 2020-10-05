@@ -59,17 +59,17 @@ public class MainActivity extends AppCompatActivity {
 
         first.setAdapter(customListView);
 
-//        first.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent intent = new Intent (getApplicationContext(), ListdataActivity.class);
-//
-//                intent.putExtra("name", colorName);
-//                intent.putExtra( "name", desc);
-//                intent.putExtra("name", imgid);
-//                startActivity(intent);
-//            }
-//        });
+        first.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent (getApplicationContext(), ListdataActivity.class);
+
+                intent.putExtra("name", colorName);
+                intent.putExtra( "description", desc);
+                intent.putExtra("name", imgid);
+                startActivity(intent);
+            }
+        });
 
     }
 }
